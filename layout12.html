@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+ <style>
+      .block1{
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: 700;
+            margin: auto;
+            
+        }
+        .block1>p{
+            color: red;
+        }
+       
+
+     .parent{
+         margin: auto;
+         display: grid;
+         grid-gap:15%;
+         padding: 10%;
+         grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template:  "a  b  c "
+                         "a  b  c"
+                         "d  e  f "
+                         "d  e  f "
+                         ;
+     }
+     .parent div{
+
+     }
+     @media(min-width:480px){
+         .parent{
+         grid-template:  "a b c "
+                         "d e f ";
+
+
+     }   
+            
+         }
+     
+     @media only screen and (min-width:600px){
+         .parent{
+             
+             grid-gap: 10px;
+             grid-template: "a b c "
+                           "d e f ";
+
+         }
+     }
+     @media(min-width: 768px){
+         .parent{
+             
+             grid-template:  "a b c "
+                           "d e f ";
+
+                        
+         }
+     }
+     #child1{
+         grid-area: a;
+        
+     }
+     #child2{
+         grid-area: b;
+     }
+     #child3{
+         grid-area: c;
+         
+     }
+     #child4{
+         grid-area: d;
+         
+     }
+     #child5{
+         grid-area: e;
+     }
+     #child6{
+         grid-area: f;
+             
+     }
+  </style>
+   <body>
+    <div class="block1">
+        <p>Service</p>
+        <h1 >Our Service</h1>
+        <p>Service</p>
+
+      </div>
+    <div id="p1" class="parent">
+      <div id="child1">
+          innovative structure
+      </div>
+      <div id="child2">
+          architectural design</div>
+      <div id="child3">interior design</div>
+      <div id="child4">modern window design</div>
+      <div id="child5">experts architect</div>
+      <div id="child6">sofa design</div>
+    </div>
+  </body>
+</html>
